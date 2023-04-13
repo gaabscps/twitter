@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
+import { AppRoutes } from './navigation/routes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">Basic Architeture</header>
-    </div>
+    <>
+      <AppRoutes />
+    </>
   );
 }
 

@@ -1,1 +1,9 @@
-@import "./components/footer.scss"
+@import "./components/footer.scss";
+
+.loginScreen {
+  width: 100vw;
+  background-color: #242d35;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
