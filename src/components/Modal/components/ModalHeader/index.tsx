@@ -1,17 +1,17 @@
-import React, { ReactComponentElement } from 'react';
+import React, { ReactComponentElement, useState } from 'react';
 import { CloseX } from '../../../../assets/images/svg/closeX';
 
 interface ModalHeaderProps {
   content: string | JSX.Element;
+  setOpen: (open: boolean) => void;
 }
 
-export const ModalHeader: React.FC<ModalHeaderProps> = ({ content }) => {
-  console.log('modal');
+export const ModalHeader: React.FC<ModalHeaderProps> = ({ content, setOpen }) => {
   return (
     <>
       <div className="modalHeader">
         <div className="modalHeader--icon">
-          <div className="buttonRoundEffect">
+          <div onClick={() => setOpen(false)} className="buttonRoundEffect">
             <CloseX color="white" width={20} height={20} />
           </div>
         </div>

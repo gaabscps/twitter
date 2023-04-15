@@ -1,14 +1,18 @@
-import React from "react";
-import { LoginContent } from "./ui";
+import React, { useState } from 'react';
+import { LoginContent } from './ui';
 
 export interface LoginScreenProps {}
 
 export const LoginScreen: React.FC<LoginScreenProps> = () => {
-  console.log("login screen");
+  const [value, setValue] = useState('');
+
+  const onChange = (value: string) => {
+    setValue(value);
+  };
 
   return (
     <>
-      <LoginContent />
+      <LoginContent value={value} onChange={onChange} />
     </>
   );
 };

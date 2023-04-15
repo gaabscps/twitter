@@ -22,11 +22,32 @@
     width: 50px;
     margin-bottom: 8px;
     padding: 0 16px;
+    .buttonRoundEffect {
+    }
   }
   .modalHeader--content {
     display: flex;
     justify-content: center;
     flex: 5;
     margin-bottom: 12px;
+    margin-left: 1px;
+  }
+}
+
+.modalBody {
+  position: relative;
+  display: block;
+  margin: auto;
+  padding: 0 32px;
+  min-width: 364px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  .modalBodyHeaderContainer {
+    display: flex;
+    align-items: center;
+    .modalBodyHeaderContent {
+      justify-self: center;
+    }
   }
 }
