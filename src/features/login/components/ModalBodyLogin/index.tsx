@@ -2,15 +2,27 @@ import { GoogleLogo } from '../../../../assets/images/svg/googleLogo';
 import { AppleLogo } from '../../../../assets/images/svg/appleLogo';
 import { Button } from '../../../../components/Button';
 import { LineSeparator } from '../LineSeparator';
-import React from 'react';
+import React, { FormEvent } from 'react';
 import { InputText } from '../../../../components/InputText';
+import { FormData, FormErrors, OnChangeFormInput } from '../../../../hooks/useForm';
 
 interface ModalBodyLoginProps {
-  onChange: (e: any) => void;
-  value: string;
+  onChange: OnChangeFormInput;
+  formData: FormData;
+  auth: () => void;
+  formErrors: FormErrors;
 }
 
-export const ModalBodyLogin: React.FC<ModalBodyLoginProps> = ({ onChange, value }) => {
+export enum FormInputName {
+  login = 'login',
+}
+
+export const ModalBodyLogin: React.FC<ModalBodyLoginProps> = ({
+  onChange,
+  auth,
+  formData,
+  formErrors,
+}) => {
   const Buttons =
     [
       {
@@ -48,25 +60,33 @@ export const ModalBodyLogin: React.FC<ModalBodyLoginProps> = ({ onChange, value 
       <div style={{ marginBottom: '11px' }}>
         <LineSeparator />
       </div>
-      <InputText
-        placeholder="Celular, e-mail ou nome de usuário"
-        onChange={onChange}
-        value={value}
-      />
-      <div className="loginActionContainer">
-        <Button
-          className="loginActionButton"
-          content="Avançar"
-          bold={true}
-          onClick={() => undefined}
+      <form
+        onSubmit={e => {
+          auth();
+          e.preventDefault();
+        }}
+      >
+        <InputText
+          placeholder="Celular, e-mail ou nome de usuário"
+          onChange={e => onChange(FormInputName.login)(e.target.value)}
+          value={formData[FormInputName.login] as string}
+          error={formErrors.login}
         />
-        <Button
-          className="loginActionButton"
-          content="Esqueceu sua senha?"
-          onClick={() => undefined}
-          theme="Outline"
-        />
-      </div>
+        <div className="loginActionContainer">
+          <Button
+            className="loginActionButton"
+            content="Avançar"
+            bold={true}
+            onClick={() => auth()}
+          />
+          <Button
+            className="loginActionButton"
+            content="Esqueceu sua senha?"
+            onClick={() => undefined}
+            theme="Outline"
+          />
+        </div>
+      </form>
       <div className="loginSignupContainer">
         <span className="loginSignupText">Não tem uma conta?</span>
         <a href="https://twitter.com/i/flow/signup" className="loginSignupLink">

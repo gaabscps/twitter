@@ -1,4 +1,4 @@
-import React, { ReactComponentElement, useState } from 'react';
+import React from 'react';
 import { CloseX } from '../../../../assets/images/svg/closeX';
 
 interface ModalHeaderProps {
