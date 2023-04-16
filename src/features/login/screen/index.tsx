@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { LoginContent } from './ui';
-import useForm, { FormDataValue } from '../../../hooks/useForm';
+import useForm from '../../../hooks/useForm';
 import { useNavigate } from 'react-router-dom';
 import emailValidator from '../../../helpers/validators';
 
@@ -11,12 +11,17 @@ export const LoginScreen: React.FC<LoginScreenProps> = () => {
 
   const { formData, onChangeFormInput, setFormErrors, formErrors } = useForm({
     initialData: {
-      login: null,
+      login: '',
     },
   });
 
-  const auth = () => {
+  const authValidation = () => {
     if (emailValidator(String(formData.login))) {
+      if (formData.login === '') {
+        setFormErrors({
+          login: ['Login é obrigatório'],
+        });
+      }
       if (formData.login === 'admin@twitter.com') {
         Navigate('/home');
       } else {
@@ -31,20 +36,13 @@ export const LoginScreen: React.FC<LoginScreenProps> = () => {
     }
   };
 
-  const onChangeForm = (name: string) => (value: FormDataValue) => {
-    onChangeFormInput(name)(value);
-    setFormErrors({
-      login: [],
-    });
-  };
-
   return (
     <>
       <LoginContent
-        auth={auth}
+        auth={authValidation}
         formData={formData}
         formErrors={formErrors}
-        onChange={onChangeForm}
+        onChange={onChangeFormInput}
       />
     </>
   );

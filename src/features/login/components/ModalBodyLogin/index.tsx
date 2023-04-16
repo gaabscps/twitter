@@ -2,7 +2,7 @@ import { GoogleLogo } from '../../../../assets/images/svg/googleLogo';
 import { AppleLogo } from '../../../../assets/images/svg/appleLogo';
 import { Button } from '../../../../components/Button';
 import { LineSeparator } from '../LineSeparator';
-import React, { FormEvent } from 'react';
+import React from 'react';
 import { InputText } from '../../../../components/InputText';
 import { FormData, FormErrors, OnChangeFormInput } from '../../../../hooks/useForm';
 
@@ -71,6 +71,7 @@ export const ModalBodyLogin: React.FC<ModalBodyLoginProps> = ({
           onChange={e => onChange(FormInputName.login)(e.target.value)}
           value={formData[FormInputName.login] as string}
           error={formErrors.login}
+          required={true}
         />
         <div className="loginActionContainer">
           <Button
@@ -78,6 +79,7 @@ export const ModalBodyLogin: React.FC<ModalBodyLoginProps> = ({
             content="Avançar"
             bold={true}
             onClick={() => auth()}
+            type="submit"
           />
           <Button
             className="loginActionButton"

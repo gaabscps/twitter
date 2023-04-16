@@ -3,37 +3,27 @@ import React, { useEffect, useState } from 'react';
 interface InputTextProps {
   label?: string;
   placeholder: string;
-  onChange: (e: any) => void;
+  required?: boolean;
   value: string;
   error?: string[] | null | undefined;
+  onChange: (e: any) => void;
 }
 
 export const InputText: React.FC<InputTextProps> = ({
   label,
   placeholder,
   value,
+  required,
   error,
   onChange,
 }) => {
   const [focus, setFocus] = useState(false);
 
-  const errorValidator = () => {
-    if (value && (!error || error?.length === 0)) {
-      error = null;
-    }
-    if (error && (value === '' || null)) {
-      error = null;
-    } else {
-      return error;
-    }
-  };
-  console.log(value === '' ? 'vazio' : 'preenchido');
-
   return (
     <>
       <div
         className={`inputTextContainer ${focus || (focus && value) ? 'inputFocus' : ''} ${
-          errorValidator() ? 'inputErrorContainer' : ''
+          error?.length && error?.length > 0 ? 'inputErrorContainer' : ''
         }`}
       >
         <label htmlFor="login">{label}</label>
@@ -50,10 +40,11 @@ export const InputText: React.FC<InputTextProps> = ({
           type="text"
           onChange={onChange}
           value={value}
+          required={required && !error}
           onFocus={() => setFocus(!focus)}
           onBlur={() => setFocus(!focus)}
         />
-        {errorValidator() && value && <span className="inputError">{error}</span>}
+        {error && error.length > 0 && <span className="inputError">{error}</span>}
       </div>
     </>
   );

@@ -7,26 +7,32 @@ interface ButtonProps {
   icon?: React.ReactNode | string;
   bold?: boolean;
   theme?: 'Black' | 'Outline';
+  type?: 'button' | 'submit' | 'reset';
 }
 
 export const Button: React.FC<ButtonProps> = ({
   content,
   icon,
-  bold,
-  onClick,
   theme,
+  type,
+  bold,
   className,
+  onClick,
 }) => {
   return (
     <>
-      <div onClick={() => onClick()} className={`buttonContainer button${theme} ${className}`}>
+      <button
+        type={type}
+        onClick={() => onClick()}
+        className={`buttonContainer button${theme} ${className}`}
+      >
         <div className="buttonIcon" style={{ color: 'black' }}>
           {icon}
         </div>
         <div style={bold ? { fontWeight: '700' } : {}} className="buttonContent">
           {content}
         </div>
-      </div>
+      </button>
     </>
   );
 };

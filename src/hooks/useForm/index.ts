@@ -40,6 +40,9 @@ const useForm = ({ initialData = {}, initialErrors = {} }: UseFormParameters): U
       updateFormData({
         [inputName]: data,
       });
+      setFormErrors({
+        [inputName]: [],
+      });
     };
 
   const resetForm = (): void => {
