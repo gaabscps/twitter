@@ -21,8 +21,24 @@
   .modalHeader--icon {
     width: 50px;
     margin-bottom: 8px;
-    padding: 0 16px;
+    padding: 0 10px;
     .buttonRoundEffect {
+      transition: all 0.2s ease-in-out;
+      padding: 7px;
+      width: fit-content;
+      border-radius: 30px;
+      height: 34px;
+      cursor: pointer;
+    }
+    &:hover {
+      .buttonRoundEffect {
+        transition: all 0.2s ease-in-out;
+        padding: 7px;
+        background-color: #ffffff1a;
+        width: fit-content;
+        border-radius: 30px;
+        height: 34px;
+      }
     }
   }
   .modalHeader--content {
