@@ -23,7 +23,7 @@ export const InputText: React.FC<InputTextProps> = ({
     <>
       <div
         className={`inputTextContainer ${focus || (focus && value) ? 'inputFocus' : ''} ${
-          error?.length && error?.length > 0 ? 'inputErrorContainer' : ''
+          error && error?.length > 0 && 'inputErrorContainer'
         }`}
       >
         <label htmlFor="login">{label}</label>
@@ -41,8 +41,8 @@ export const InputText: React.FC<InputTextProps> = ({
           onChange={onChange}
           value={value}
           required={required && !error}
-          onFocus={() => setFocus(!focus)}
-          onBlur={() => setFocus(!focus)}
+          onFocus={() => setFocus(true)}
+          onBlur={() => setFocus(false)}
         />
         {error && error.length > 0 && <span className="inputError">{error}</span>}
       </div>
