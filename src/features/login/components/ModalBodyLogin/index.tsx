@@ -27,12 +27,12 @@ export const ModalBodyLogin: React.FC<ModalBodyLoginProps> = ({
     [
       {
         name: 'Fazer login com o Google',
-        icon: <GoogleLogo width={18} height={'fit-content'} />,
+        icon: <GoogleLogo width={18} height={18} />,
         action: () => (window.location.href = 'https://google.com.br'),
       },
       {
         name: 'Entrar com Apple',
-        icon: <AppleLogo width={18} height={'fit-content'} />,
+        icon: <AppleLogo width={18} height={18} />,
         action: () => (window.location.href = 'https://apple.com.br'),
         bold: true,
       },
