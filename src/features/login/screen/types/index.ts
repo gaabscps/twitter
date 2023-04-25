@@ -1,10 +1,4 @@
-import {
-  FieldErrors,
-  FieldValues,
-  SubmitHandler,
-  UseFormHandleSubmit,
-  UseFormRegister,
-} from 'react-hook-form';
+import { FieldErrors, FieldValues, UseFormHandleSubmit, UseFormRegister } from 'react-hook-form';
 
 export type HandleFormProps = {
   value: string;

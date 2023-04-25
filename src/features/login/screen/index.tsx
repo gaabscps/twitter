@@ -4,9 +4,11 @@ import useForm from '../../../hooks/useForm';
 import { useNavigate } from 'react-router-dom';
 import emailValidator from '../../../helpers/validators';
 
-export interface LoginScreenProps {}
+export interface LoginScreenProps {
+  setUser: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-export const LoginScreen: React.FC<LoginScreenProps> = () => {
+export const LoginScreen: React.FC<LoginScreenProps> = ({ setUser }) => {
   const Navigate = useNavigate();
 
   const { formData, onChangeFormInput, setFormErrors, formErrors } = useForm({
@@ -23,6 +25,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = () => {
         });
       }
       if (formData.login === 'admin@twitter.com') {
+        setUser(true);
         Navigate('/home');
       } else {
         setFormErrors({
