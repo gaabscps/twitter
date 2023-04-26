@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 
 interface ProtectedRoutesProps {
   user: boolean;
+  setUser: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const useAuth = (isLogged: boolean) => {
-  const userAuth = { logged: isLogged, name: 'John Doe' };
-  return userAuth && userAuth.logged;
-};
+export const ProtectedRoutes: React.FC<ProtectedRoutesProps> = ({ user, setUser }) => {
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem('user');
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      setUser(foundUser);
+    }
+  }, []);
 
-export const ProtectedRoutes: React.FC<ProtectedRoutesProps> = ({ user }) => {
-  const isAuth = useAuth(user);
-  return isAuth ? <Outlet /> : <Navigate to="/" />;
+  return user ? <Outlet /> : <Navigate to="/caca" />;
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { LoginContent } from './ui';
 import useForm from '../../../hooks/useForm';
 import { useNavigate } from 'react-router-dom';
@@ -26,6 +26,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ setUser }) => {
       }
       if (formData.login === 'admin@twitter.com') {
         setUser(true);
+        localStorage.setItem('user', 'true');
         Navigate('/home');
       } else {
         setFormErrors({
