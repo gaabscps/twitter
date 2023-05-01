@@ -3,6 +3,7 @@
   justify-content: space-between;
   flex-direction: column;
   height: 100%;
+  width: 340px;
   .sidebarBody {
     height: 100%;
     padding: 0 25px;
@@ -41,6 +42,9 @@
 }
 
 @media screen and (max-width: 1300px) {
+  .home-leftSidebar {
+    width: 90px;
+  }
   .item-spam {
     display: none;
     z-index: -1;
