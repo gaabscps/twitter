@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
 
-interface ProtectedRoutesProps {
-  user: boolean;
-  setUser: React.Dispatch<React.SetStateAction<boolean>>;
-}
+export const ProtectedRoutes: React.FC = () => {
+  const { user, setUser } = useAuth();
 
-export const ProtectedRoutes: React.FC<ProtectedRoutesProps> = ({ user, setUser }) => {
   useEffect(() => {
     const loggedInUser = localStorage.getItem('user');
     if (loggedInUser) {

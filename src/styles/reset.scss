@@ -104,12 +104,13 @@ meter {
 
 #root {
   display: flex;
+  height: 100%;
+  width: 100%;
 }
 
 div {
   color: white;
 }
-
-html {
-  background-color: #242d35;
+body {
+  min-height: 100vh;
 }

@@ -11,6 +11,7 @@ export const ModalHeader: React.FC<ModalHeaderProps> = ({ content, setOpen }) =>
   const navigate = useNavigate();
   return (
     <>
+      <div className="blur" />
       <div className="modalHeader">
         <div className="modalHeader--icon">
           <div

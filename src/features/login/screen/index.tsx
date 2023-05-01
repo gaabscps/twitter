@@ -3,13 +3,13 @@ import { LoginContent } from './ui';
 import useForm from '../../../hooks/useForm';
 import { useNavigate } from 'react-router-dom';
 import emailValidator from '../../../helpers/validators';
+import useAuth from '../../../hooks/useAuth';
 
-export interface LoginScreenProps {
-  setUser: React.Dispatch<React.SetStateAction<boolean>>;
-}
+// s
 
-export const LoginScreen: React.FC<LoginScreenProps> = ({ setUser }) => {
+export const LoginScreen: React.FC = () => {
   const Navigate = useNavigate();
+  const { setUser } = useAuth();
 
   const { formData, onChangeFormInput, setFormErrors, formErrors } = useForm({
     initialData: {
