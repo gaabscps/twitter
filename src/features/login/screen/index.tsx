@@ -27,6 +27,7 @@ export const LoginScreen: React.FC = () => {
       if (formData.login === 'admin@twitter.com') {
         setUser(true);
         localStorage.setItem('user', 'true');
+        localStorage.setItem('userName', 'admin');
         Navigate('/home');
       } else {
         setFormErrors({

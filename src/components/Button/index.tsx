@@ -6,7 +6,7 @@ interface ButtonProps {
   className?: string;
   icon?: React.ReactNode | string;
   bold?: boolean;
-  theme?: 'Black' | 'Outline';
+  theme?: 'Black' | 'Outline' | 'Twitter';
   type?: 'button' | 'submit' | 'reset';
 }
 

@@ -1,0 +1,47 @@
+.profileTag {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding-right: 10px;
+}
+
+.roundProfileImage {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+
+  img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 0 0 0 1px #ccc;
+    }
+  }
+}
+
+.profileTagUser {
+  display: flex;
+  .profileTagUserName {
+    display: flex;
+    flex-direction: column;
+    text-align: initial;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .profileTag {
+    margin-left: 20px;
+  }
+  .profileTagUser {
+    display: none;
+  }
+}

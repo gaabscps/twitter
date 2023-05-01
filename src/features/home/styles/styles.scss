@@ -1,53 +1,43 @@
+@import '../components/Sidebar/styles/styles.scss';
+
 .home-body {
   background-color: #000;
   height: 100vh;
   width: 100%;
+  display: flex;
+  overflow: auto;
 }
 
 .home-container {
   display: flex;
   justify-content: center;
-}
-
-.home-leftSidebar {
-  width: 275px;
-  display: flex;
-  justify-content: flex-start;
-  .leftSidebar-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5px;
-    .leftSidebar-item {
-      margin-top: 10px;
-      width: fit-content;
-      display: flex;
-      cursor: pointer;
-      &:hover {
-        background-color: #ffffff17;
-        border-radius: 25px;
-      }
-      .leftSidebar-item-content {
-        font-size: 20px;
-        padding: 8px 12px;
-        display: flex;
-        .item-spam {
-          margin-left: 20px;
-          margin-right: 16px;
-          text-align: center;
-        }
-      }
-    }
-  }
+  width: 100%;
 }
 
 .home-feed {
   width: 600px;
   display: flex;
   justify-content: center;
+  border: solid 1px rgb(47, 51, 54);
+  position: relative;
+  overflow: auto;
+  .headerblur {
+    backdrop-filter: blur(12px);
+    background-color: rgba(0, 0, 0, 0.65);
+    position: fixed;
+    z-index: 1;
+    width: 600px;
+    height: 107px;
+    position: fixed;
+    border: solid 1px rgb(47, 51, 54);
+  }
+  .home-feedContainer {
+    margin-top: 107px;
+    width: 100%;
+  }
 }
 
 .home-rightSidebar {
-  width: 300px;
   display: flex;
   justify-content: center;
 }
@@ -57,11 +47,52 @@
   width: 50px;
   height: 50px;
   display: flex;
-  justify-content: center;
   align-items: center;
   padding: 10px;
   &:hover {
     background-color: #ffffff17;
     border-radius: 50%;
+  }
+}
+.home-feedContent {
+  position: relative;
+  z-index: 0;
+}
+
+.feedTextArea {
+  height: 116px;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px rgb(47, 51, 54);
+}
+
+.feedPost {
+  height: 400px;
+  background-color: aquamarine;
+  border-right: solid 1px rgb(47, 51, 54);
+  border-left: solid 1px rgb(47, 51, 54);
+}
+.feedPost1 {
+  height: 400px;
+  background-color: red;
+  border-right: solid 1px rgb(47, 51, 54);
+  border-left: solid 1px rgb(47, 51, 54);
+}
+
+.home-rightSidebar {
+  width: 350px;
+}
+
+@media screen and (max-width: 1300px) {
+  .home-body {
+    justify-content: center;
+  }
+  .home-rightSidebar {
+    width: 288px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .home-rightSidebar {
+    display: none;
   }
 }
