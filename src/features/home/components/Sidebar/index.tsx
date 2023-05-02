@@ -3,7 +3,6 @@ import { TwitterIcon } from '../../../../assets/images/svg/twitterIcon';
 import { HashTag } from '../../../../assets/images/svg/Hashtag';
 import { Config } from '../../../../assets/images/svg/config';
 import { Button } from '../../../../components/Button';
-import useAuth from '../../../../hooks/useAuth';
 import { ProfileTag } from '../../../../components/ProfileTag';
 
 export const HomeSidebar: React.FC = () => {

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { LoginContent } from './ui';
 import useForm from '../../../hooks/useForm';
 import { useNavigate } from 'react-router-dom';

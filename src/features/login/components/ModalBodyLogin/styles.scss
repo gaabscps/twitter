@@ -9,6 +9,9 @@
 
 .modalSocialMediaButtonContainer {
   margin-bottom: 25px;
+  .modalSocialMediaButton {
+    min-width: 300px;
+  }
 }
 
 .loginActionContainer {
@@ -16,6 +19,7 @@
   .loginActionButton {
     height: 36px;
     margin: 20px 0;
+    min-width: 300px;
   }
 }
 

@@ -6,7 +6,7 @@ interface ButtonProps {
   className?: string;
   icon?: React.ReactNode | string;
   bold?: boolean;
-  theme?: 'Black' | 'Outline' | 'Twitter';
+  theme?: 'Black' | 'Outline' | 'Twitter' | 'Social';
   type?: 'button' | 'submit' | 'reset';
 }
 
@@ -24,7 +24,7 @@ export const Button: React.FC<ButtonProps> = ({
       <button
         type={type}
         onClick={() => onClick()}
-        className={`buttonContainer button${theme} ${className}`}
+        className={`buttonContainer button${theme || ''} ${className || ''}`}
       >
         <div className="buttonIcon" style={{ color: 'black' }}>
           {icon}

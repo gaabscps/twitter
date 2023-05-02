@@ -11,7 +11,7 @@ input {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 /* Track */
@@ -21,7 +21,8 @@ input {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #414141;
+  border-radius: 40px;
 }
 
 /* Handle on hover */

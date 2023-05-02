@@ -50,6 +50,7 @@ export const ModalBodyLogin: React.FC<ModalBodyLoginProps> = ({
           className="modalSocialMediaButtonContainer"
         >
           <Button
+            className="modalSocialMediaButton"
             onClick={socialMedia.action}
             content={socialMedia.name}
             icon={socialMedia.icon}
