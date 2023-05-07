@@ -1,4 +1,5 @@
 @import '../components/Sidebar/styles/styles.scss';
+@import '../components/Header/styles/styles.scss';
 
 .home-body {
   background-color: #000;
@@ -29,6 +30,10 @@
     position: fixed;
     top: 0px;
     border: solid 1px rgb(47, 51, 54);
+    .headerblur-title {
+      font-size: 20px;
+      font-weight: 600;
+    }
   }
   .home-feedContainer {
     margin-top: 107px;
@@ -47,7 +52,7 @@
   height: 50px;
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 0.625rem;
   &:hover {
     background-color: #ffffff17;
     border-radius: 50%;
@@ -80,6 +85,24 @@
 
 .home-rightSidebar {
   width: 350px;
+}
+
+.flexblur {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-title {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.header-list {
+  height: 50%;
+  width: 100%;
 }
 
 @media screen and (max-width: 1300px) {
