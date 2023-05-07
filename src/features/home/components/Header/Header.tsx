@@ -5,7 +5,7 @@ interface HeaderProps {
 }
 
 export const HomeHeader: React.FC<HeaderProps> = ({ titles }) => {
-  const [activeIndex, setActiveIndex] = useState(-1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const handleClick = (index: number) => {
     if (index != activeIndex) {

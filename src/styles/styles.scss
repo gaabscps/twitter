@@ -1,5 +1,6 @@
-@import './reset.scss';
-@import './variables.scss';
+@import './config/reset.scss';
+@import './config/base.scss';
+@import './config/variables.scss';
 @import './components/styles.scss';
 @import './features/styles.scss';
 @import './app.scss';

@@ -1,5 +1,6 @@
 @import '../components/Sidebar/styles/styles.scss';
 @import '../components/Header/styles/styles.scss';
+@import '../components/Trends/styles/styles.scss';
 
 .home-body {
   background-color: #000;
@@ -78,13 +79,26 @@
 }
 .feedPost1 {
   height: 400px;
-  background-color: red;
+
   border-right: solid 1px rgb(47, 51, 54);
   border-left: solid 1px rgb(47, 51, 54);
 }
 
 .home-rightSidebar {
   width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  .home-rightSidebar-body {
+    padding: 5px 25px;
+    .rightSidebar-card-title-container {
+      .rightSidebar-card-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: e7e6ea;
+      }
+    }
+  }
 }
 
 .flexblur {
