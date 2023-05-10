@@ -1,0 +1,134 @@
+@import "../components/Sidebar/styles/styles.scss";
+@import "../components/Header/styles/styles.scss";
+@import "../components/Trends/styles/styles.scss";
+
+.home-body {
+  background-color: #000;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: auto;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.home-feed {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  border: solid 1px rgb(47, 51, 54);
+  position: relative;
+  .headerblur {
+    backdrop-filter: blur(12px);
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+    width: 600px;
+    height: 107px;
+    position: fixed;
+    top: 0px;
+    border: solid 1px rgb(47, 51, 54);
+    .headerblur-title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+  .home-feedContainer {
+    margin-top: 107px;
+    width: 100%;
+  }
+}
+
+.home-rightSidebar {
+  display: flex;
+  justify-content: center;
+}
+
+.action-icon {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0.625rem;
+  &:hover {
+    background-color: #ffffff17;
+    border-radius: 50%;
+  }
+}
+.home-feedContent {
+  position: relative;
+  z-index: 0;
+}
+
+.feedTextArea {
+  height: 116px;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px rgb(47, 51, 54);
+}
+
+.feedPost {
+  height: 400px;
+  background-color: aquamarine;
+  border-right: solid 1px rgb(47, 51, 54);
+  border-left: solid 1px rgb(47, 51, 54);
+}
+.feedPost1 {
+  height: 400px;
+
+  border-right: solid 1px rgb(47, 51, 54);
+  border-left: solid 1px rgb(47, 51, 54);
+}
+
+.home-rightSidebar {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  .home-rightSidebar-body {
+    padding: 5px 25px;
+    .rightSidebar-card-title-container {
+      .rightSidebar-card-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: e7e6ea;
+      }
+    }
+  }
+}
+
+.flexblur {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-title {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.header-list {
+  height: 50%;
+  width: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+  .home-body {
+    justify-content: center;
+  }
+  .home-rightSidebar {
+    width: 288px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .home-rightSidebar {
+    display: none;
+  }
+}

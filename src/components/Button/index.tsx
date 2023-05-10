@@ -1,13 +1,15 @@
-import React from 'react';
+"use client";
+
+import React from "react";
 
 interface ButtonProps {
   content: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
   className?: string;
   icon?: React.ReactNode | string;
   bold?: boolean;
-  theme?: 'Black' | 'Outline' | 'Twitter' | 'Social';
-  type?: 'button' | 'submit' | 'reset';
+  theme?: "Black" | "Outline" | "Twitter" | "Social";
+  type?: "button" | "submit" | "reset";
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -23,13 +25,16 @@ export const Button: React.FC<ButtonProps> = ({
     <>
       <button
         type={type}
-        onClick={() => onClick()}
-        className={`buttonContainer button${theme || ''} ${className || ''}`}
+        onClick={() => (onClick && onClick()) || undefined}
+        className={`buttonContainer button${theme || ""} ${className || ""}`}
       >
-        <div className="buttonIcon" style={{ color: 'black' }}>
+        <div className="buttonIcon" style={{ color: "black" }}>
           {icon}
         </div>
-        <div style={bold ? { fontWeight: '700' } : {}} className="buttonContent">
+        <div
+          style={bold ? { fontWeight: "700" } : {}}
+          className="buttonContent"
+        >
           {content}
         </div>
       </button>

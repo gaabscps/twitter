@@ -1,14 +1,18 @@
-import React from 'react';
-import { CloseX } from '../../../../assets/images/svg/closeX';
-import { useNavigate } from 'react-router-dom';
+"use client";
+
+import React from "react";
+import { CloseX } from "../../../../assets/images/svg/closeX";
+import Link from "next/link";
 
 interface ModalHeaderProps {
   content: string | JSX.Element;
   setOpen: (open: boolean) => void;
 }
 
-export const ModalHeader: React.FC<ModalHeaderProps> = ({ content, setOpen }) => {
-  const navigate = useNavigate();
+export const ModalHeader: React.FC<ModalHeaderProps> = ({
+  content,
+  setOpen,
+}) => {
   return (
     <>
       <div className="blur" />
@@ -16,12 +20,13 @@ export const ModalHeader: React.FC<ModalHeaderProps> = ({ content, setOpen }) =>
         <div className="modalHeader--icon">
           <div
             onClick={() => {
-              navigate('/error404');
               setOpen(false);
             }}
             className="buttonRoundEffect"
           >
-            <CloseX color="white" width={20} height={20} />
+            <Link href="/404">
+              <CloseX color="white" width={20} height={20} />
+            </Link>
           </div>
         </div>
         <div className="modalHeader--content">{content}</div>

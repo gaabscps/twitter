@@ -11,11 +11,14 @@
     align-items: flex-end;
     padding-top: 17px;
     padding-left: 10px;
+    position: relative;
+    z-index: 100;
   }
   .placeholderLabel {
     position: absolute;
     top: 15px;
     left: 8px;
+    z-index: 0;
   }
 }
 .placeholderFocus {

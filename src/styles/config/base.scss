@@ -7,6 +7,14 @@
   align-items: center;
 }
 
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
 .justify-content-between {
   justify-content: space-between;
 }
@@ -37,6 +45,30 @@
 
 .flex-nowrap {
   flex-wrap: nowrap;
+}
+
+.flex-gap-0 {
+  gap: 0;
+}
+
+.flex-gap-1 {
+  gap: 1rem;
+}
+
+.flex-gap-2 {
+  gap: 2rem;
+}
+
+.flex-gap-3 {
+  gap: 3rem;
+}
+
+.flex-gap-4 {
+  gap: 4rem;
+}
+
+.flex-gap-5 {
+  gap: 5rem;
 }
 
 // Base

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SvgProps {
   width: number;
@@ -11,7 +11,7 @@ export const AppleLogo: React.FC<SvgProps> = ({ width, height }) => {
       viewBox="0 0 24 24"
       aria-hidden="true"
       className="r-4qtqp9 r-yyyyoo r-z80fyv r-1d4mawv r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-19wmn03"
-      style={{ color: 'rgb(15, 20, 25)' }}
+      style={{ color: "rgb(15, 20, 25)" }}
       width={width}
       height={height}
     >

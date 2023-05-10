@@ -1,90 +1,34 @@
-# Portfolio Project - React Twitter Clone
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This is a portfolio project for a front-end developer who has built a Twitter clone using React. The project's main objective was to build a Twitter clone that looks and feels like Twitter, without using Bootstrap or any other component library.
+## Getting Started
 
-## Project Overview
-
-The Twitter clone project is a web application built using React.ts, which allows users to interact with a web page that looks and feels like the Twitter interface. The app uses Inspect to gather data about Twitter's interface, such as the CSS styles, HTML structure, and TypeScript code, to build a similar interface.
-
-This project has been developed with the following features:
-
-<!-- - Users can post tweets.  -->
-<!-- - Users can reply to other users' tweets. -->
-<!-- - Users can like other users' tweets. -->
-<!-- - Users can retweet other users' tweets. -->
-<!-- - Users can follow other users. -->
-<!-- - Users can view their own profile and edit their account details. -->
-
-## Project Requirements
-
-- Node.js
-- React.ts
-- JavaScript
-- Typescript
-- CSS
-- HTML
-- Inspect tool
-
-## Installation
-
-To install this project, follow these steps:
-
-1. Clone the repository to your local machine:
+First, run the development server:
 
 ```bash
-git clone https://github.com/your-username/twitter-clone.git
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
-2. Install the dependencies:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-yarn install
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-3. Run the project:
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-```bash
-yarn start
-```
+## Learn More
 
-## Usage
+To learn more about Next.js, take a look at the following resources:
 
-To use the project, follow these steps:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-1. Open your web browser and navigate to `http://localhost:3000`.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-<!-- 2. You should see the Twitter clone interface. You can post tweets, reply to other users' tweets, like other users' tweets, retweet other users' tweets, follow other users, and view your own profile and edit your account details. -->
+## Deploy on Vercel
 
-## Contribution
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Contributions are always welcome! If you'd like to contribute to this project, please follow these steps:
-
-1. Fork the project.
-
-2. Create your feature branch:
-
-```bash
-git checkout -b feature/YourFeature
-```
-
-3. Commit your changes:
-
-```bash
-git commit -am 'Add YourFeature'
-```
-
-4. Push to the branch:
-
-```bash
-git push origin feature/YourFeature
-```
-
-5. Submit a pull request.
-
-## Credits
-
-This project was inspired by Twitter's user interface, and its codebase was created by the front-end developer.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
