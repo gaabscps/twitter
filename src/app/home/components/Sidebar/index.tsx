@@ -4,6 +4,7 @@ import { HashTag } from "../../../../assets/images/svg/Hashtag";
 import { Config } from "../../../../assets/images/svg/config";
 import { Button } from "../../../../components/Button";
 import { ProfileTag } from "../../../../components/ProfileTag";
+import Link from "next/link";
 
 export const HomeSidebar: React.FC = () => {
   const sidebarItem = [
@@ -22,9 +23,15 @@ export const HomeSidebar: React.FC = () => {
       <div className="home-leftSidebar">
         <div className="home-leftSidebar" style={{ position: "fixed" }}>
           <div className="sidebarBody">
-            <div className="action-icon">
-              <TwitterIcon color="rgb(214, 217, 219)" width={32} height={32} />
-            </div>
+            <Link href={"/"}>
+              <div className="action-icon">
+                <TwitterIcon
+                  color="rgb(214, 217, 219)"
+                  width={32}
+                  height={32}
+                />
+              </div>
+            </Link>
             <ul className="leftSidebar-container">
               {sidebarItem.map((item, index) => (
                 <li className="leftSidebar-item" key={index}>
